@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Fish</title>
+
+    <link rel="icon" href="img/favicon/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.json">
+
+</head>
+
+<body>
+    <div id="modal" class="modal">
+        <div class="modal-inner">
+            <div class="loss">Игра окончена</div>
+            <div class="win">Вы победили</div>
+            <button class="button-start button-restart btn btn-white btn-animate button-restart">играть еще</button>
+            <div class="modal-img">
+                <img alt="fishes" src="./img/fishes.png">
+            </div>
+        </div>
+    </div>
+
+    <button id="button" class="button-start btn btn-white btn-animate">Начать игру</button>
+
+    <div class="buttons-wrap">
+        <button class="buttons btn btn-white btn-animate button-restart">Вернуться</button>
+        <button id="button-end" class="buttons btn btn-white btn-animate">Завершить игру</button>
+    </div>
+
+
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <canvas id="mycanvas" width="1000" height="390"></canvas>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
