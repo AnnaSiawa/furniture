@@ -1,0 +1,17 @@
+@import "../modules/vars.scss";
+@import "../modules/font.scss";
+@import "../modules/functions.scss";
+
+.button_currency {
+  background-color: $color-text;
+  color: $color-white;
+  display: none;
+  @media all and (min-width: $breakpoint-tablet-S) {
+    //padding-bottom: 40px;
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+.button_account {
+  background-color: $color-button;
+}

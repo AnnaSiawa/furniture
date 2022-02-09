@@ -1,0 +1,58 @@
+@import "../modules/vars.scss";
+@import "../modules/font.scss";
+@import "../modules/functions.scss";
+
+.main {
+  position: relative;
+  z-index: $position-block;
+  font-family: $primaryFont;
+  h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 125%;
+    opacity: 0.8;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      font-size: 76px;
+      line-height: 93px;
+    }
+    @media all and (min-width: $breakpoint-desktop-S) {
+      width: 660px;
+    }
+  }
+  a {
+    color: $color-button;
+    text-decoration: underline;
+  }
+  p {
+    font-family: $font-Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      width: 489px;
+    }
+  }
+  button {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+  }
+  .main-image {
+    width: 300px;
+    @media all and (min-width: $breakpoint-desktop-L) {
+      width: 1240px;
+      position: absolute;
+      right: 0;
+      top: 70px;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+

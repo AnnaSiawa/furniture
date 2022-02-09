@@ -1,0 +1,236 @@
+@import "../modules/vars.scss";
+@import "../modules/font.scss";
+@import "../modules/functions.scss";
+@import "../modules/ui.scss";
+
+
+.header {
+  position: relative;
+  display: flex;
+  z-index: $position-block;
+
+  @include main-style-text;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $font-Roboto;
+
+    &_authorization {
+      display: flex;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      &:first-child {
+        margin-right: 15px;
+      }
+
+      &:last-child {
+        display: none;
+        @media all and (min-width: $breakpoint-mobile-L) {
+          display: inline;
+        }
+      }
+    }
+  }
+
+  &__number {
+    display: flex;
+    align-items: center;
+    margin-right: 57px;
+  }
+
+  &__slogan {
+    display: none;
+    font-style: italic;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      display: block;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 1 25%;
+    font-family: $font-Roboto;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      flex: 0 1 85%;
+    }
+    @media all and (min-width: $breakpoint-desktop-L) {
+      flex: 0 1 62%;
+    }
+  }
+
+  &__logo {
+    width: 200px;
+    height: 70px;
+    margin-right: 45px;
+    line-height: 70px;
+    background-color: $color-text;
+    color: $color-white;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-family: $font-Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+  }
+
+  &__menu {
+    //right: 0;
+
+    position: fixed;
+    width: 100vw;
+    height: calc(100vh - 124px);
+    top: 124px;
+    right: -220%;
+    padding-left: 20px;
+    background-color: $color-gray;
+    @media all and (min-width: $breakpoint-tablet-S) {
+      top: 150px;
+      height: calc(100vh - 150px);
+    }
+    @media all and (min-width: $breakpoint-tablet-L) {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 796px;
+      width: 100%;
+      background-color: initial;
+      top: initial;
+      right: initial;
+      height: 100%;
+    }
+
+    &_item {
+      text-transform: capitalize;
+      color: $color-text-menu;
+      cursor: pointer;
+      padding-bottom: 10px;
+      @media all and (min-width: $breakpoint-tablet-L) {
+       padding-bottom: 0;
+      }
+      //&:not(:last-child) {
+      //  margin-right: 50px;
+      //  //@media screen and (min-width: $width-tablet-S) {
+      //  //  padding-bottom: 45px;
+      //  //}
+      //}
+    }
+  }
+  &__menu._active {
+    width: 100vw;
+    right: 0;
+    z-index: 1001;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      width: auto;
+    }
+  }
+
+
+  &__userMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_item {
+      width: 40px;
+      height: 40px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:first-child {
+        margin-right: 45px;
+      }
+    }
+  }
+
+  .menu {
+    &__burger {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 10px 0 0;
+      flex: 0 1 11%;
+      cursor: pointer;
+      z-index: 3;
+      @media all and (min-width: $breakpoint-tablet-L) {
+        display: none;
+      }
+    }
+
+    &__icon {
+      width: 30px;
+      height: 16.56px;
+      position: relative;
+      z-index: 5;
+      transform: rotate(0deg);
+      transition: 0.5s ease-in-out;
+
+      span {
+        display: block;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 2.76px;
+        background-color: $color-button;
+        border-radius: 2px;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+        opacity: 1;
+
+        &:nth-child(1) {
+          top: 0;
+        }
+
+        &:nth-child(2) {
+          top: 8.9px;
+        }
+
+        &:nth-child(3) {
+          top: 17.8px;
+        }
+      }
+    }
+
+    &__icon._active {
+      span {
+        &:nth-child(1) {
+          top: 6.9px;
+          transform: rotate(135deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          top: 6.9px;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+}
+
+
+

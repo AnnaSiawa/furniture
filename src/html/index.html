@@ -7,61 +7,40 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Small Fish</title>
+    <title>Furniture</title>
 
     <link rel="icon" href="img/favicon/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="manifest" href="manifest.json">
-
 </head>
 
 <body>
-    <div id="modal" class="modal">
-        <div class="modal-inner">
-            <div class="loss">Игра окончена</div>
-            <div class="win">Вы победили</div>
-            <button class="button-start button-restart btn btn-white btn-animate button-restart">играть еще</button>
-            <div class="modal-img">
-                <img alt="fishes" src="./img/fishes.png">
-            </div>
-        </div>
+
+<div class="">
+    <div class="wrapper">
+        <img class="wrapper-img livingRoomMobile" alt="living-room" src="../img/living-room-mobile.png">
+        <img class="wrapper-img livingRoom" alt="living-room" src="../img/living-room.png">
+        @@include("components/header.html")
+        @@include("components/main-page.html")
     </div>
 
-    <button id="button" class="button-start btn btn-white btn-animate">Начать игру</button>
+    @@include("components/aboutUs.html")
+    @@include("components/product.html")
+    @@include("components/deals.html")
+    @@include("components/starProduct.html")
+    @@include("components/offer.html")
+    @@include("components/newInBlog.html")
+    @@include("components/feedback.html")
+    @@include("components/featuredProduct.html")
+    @@include("components/subscribe.html")
+<!--    @@include("components/footer.html")-->
 
-    <div class="buttons-wrap">
-        <button class="buttons btn btn-white btn-animate button-restart">Вернуться</button>
-        <button id="button-end" class="buttons btn btn-white btn-animate">Завершить игру</button>
-    </div>
+    <!--<img src="img/qr-code.png" alt="photo"/>-->
+    <!--@@loop("components/news-item.html", "../../gulpfile.js/data/news.json")-->
 
+</div>
 
-    <div class="area">
-        <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
-    <canvas id="mycanvas" width="1000" height="390"></canvas>
-
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 
 </html>
