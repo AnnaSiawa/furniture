@@ -15,13 +15,23 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+h3 {
+  display: inline;
+  border-bottom: solid 2px $color-button;
+  font-family: $primaryFont;
+  font-weight: 600;
+  font-size: 30px;
+}
+
 html, body {
   //overflow-x: hidden;
   box-sizing: border-box;
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  font-family: $font-Roboto;
 }
+
 body::-webkit-scrollbar {
   width: 0;
   height: 0;
@@ -36,7 +46,8 @@ body::-webkit-scrollbar {
 .content-inner {
   padding: 20px 20px 0;
   @media all and (min-width: $breakpoint-tablet-L) {
-    padding: 20px 120px 0;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }
 
@@ -47,11 +58,8 @@ body::-webkit-scrollbar {
   width: 100%;
   position: relative;
   z-index: $position-background;
-  @media all and (min-width: $breakpoint-desktop-S) {
-    padding-bottom: 200px;
-  }
   @media all and (min-width: $breakpoint-desktop-L) {
-    padding-bottom: 410px;
+    padding-bottom: 180px;
   }
 
   .wrapper-img {
@@ -102,24 +110,6 @@ a {
   }
 }
 
-button {
-  cursor: pointer;
-  display: inline-block;
-  border-radius: 34px;
-  border: 1px solid $color-button;
-
-  font-family: $primaryFont;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 22px;
-  line-height: 27px;
-  text-align: center;
-  @media all and (min-width: $breakpoint-tablet-S) {
-    width: 220px;
-    height: 60px;
-  }
-}
-
 body {
   box-sizing: border-box;
   display: flex;
@@ -143,6 +133,10 @@ body.lock {
 
 @import "components/header.scss";
 @import "components/main-page.scss";
+@import "components/aboutUs.scss";
+@import "components/product.scss";
+@import "components/deals.scss";
+
 @import "components/footer.scss";
 
 //или подключение с помощью маски (sassGlob) всех файлов из директории

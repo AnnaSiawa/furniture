@@ -52,7 +52,9 @@
     "gulp-webp-html": "^1.0.2",
     "require-dir": "^1.2.0",
     "sass": "^1.45.1",
+    "swiper": "^8.0.3",
     "webpack": "^5.65.0",
     "webpack-stream": "^7.0.0"
-  }
+  },
+  "dependencies": {}
 }

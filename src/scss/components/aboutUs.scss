@@ -1,0 +1,94 @@
+@import "../modules/vars.scss";
+@import "../modules/font.scss";
+@import "../modules/functions.scss";
+
+.aboutUs {
+  position: relative;
+  z-index: $position-block;
+  padding-top: 84px;
+  padding-bottom: 84px;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 100px;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      flex-direction: row;
+    }
+  }
+
+  &__sphere {
+    display: none;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      position: relative;
+      display: block
+    }
+
+    img {
+      position: absolute;
+      top: 167px;
+      left: -183px;
+    }
+  }
+
+  &__image {
+    background-image: url("../img/aboutUshome.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 284px;
+    width: 100%;
+    padding-bottom: 34.1%;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      max-width: 620px;
+    }
+  }
+
+  &__disc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+  }
+
+  &__disc-img {
+    background-image: url("../img/aboutUschair.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 235px;
+    width: 100%;
+    padding-bottom: 43%;
+  }
+
+  h2 {
+    padding-bottom: 47px;
+    padding-top: 32px;
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    text-transform: uppercase;
+    @media all and (min-width: $breakpoint-tablet-L) {
+      font-size: 76px;
+    }
+  }
+
+  p {
+    padding-bottom: 20px;
+    font-size: 22px;
+  }
+}
+
+.aboutUs-wrap {
+  margin: 0 auto;
+  max-width: 1600px;
+  width: 100%;
+
+  background-color: $color-aboutUs;
+  border-radius: 60px;
+}

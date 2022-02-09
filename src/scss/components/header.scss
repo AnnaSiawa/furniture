@@ -8,6 +8,8 @@
   position: relative;
   display: flex;
   z-index: $position-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   @include main-style-text;
 
@@ -16,6 +18,7 @@
     justify-content: space-between;
     align-items: center;
     font-family: $font-Roboto;
+    margin-bottom: 20px;
 
     &_authorization {
       display: flex;
@@ -59,6 +62,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      margin-bottom: 217px;
+    }
   }
 
   &__nav {

@@ -4,7 +4,9 @@ $color-white: rgba(255, 255, 255, 1);
 $color-text: rgba(52, 56, 61, 1);
 $color-text-menu: rgba(52, 56, 61, 0.6);
 $color-button: rgba(205, 168, 97, 1);
+$color-aboutUs: rgba(205, 168, 97, 0.1);
 $color-gray: #5f656c;
+$color-slider-background1: #F2F1F1;
 
   /*Width breakpoints*/
 $breakpoint-fullhd: 1860px;
@@ -26,3 +28,4 @@ $primaryFont: Montserrat;
 /*z-index*/
 $position-background: 1;
 $position-block: 2;
+$position-swiper: 3;

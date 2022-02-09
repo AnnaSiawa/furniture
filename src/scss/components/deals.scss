@@ -1,0 +1,133 @@
+@import "../modules/vars.scss";
+@import "../modules/font.scss";
+@import "../modules/functions.scss";
+
+.deals {
+  position: relative;
+  z-index: $position-block;
+  padding-top: 0;
+  padding-bottom: 84px;
+
+  .title-wrap {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+  h3 {
+    border: none;
+  }
+
+  .timer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 504px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+
+    //div {
+    //  &:not(:last-child) {
+    //    margin-right: convert2em(5);
+    //  }
+    //
+    //  &:last-child {
+    //    margin-right: convert2em(2);
+    //  }
+    //}
+
+    &__score {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      background-color: red;
+      color: $color-white;
+      border-radius: 50%;
+    }
+
+    &__counter {
+      position: relative;
+      width: 66px;
+      height: 66px;
+    }
+
+    &__diagram-wrapper {
+      //position: absolute;
+      //top: 140px;
+      //left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+    }
+
+    &__diagram {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    &__diagram-all {
+      stroke: #f8f7f8;
+    }
+
+    &__diagram-current-knowledge {
+      stroke: cadetblue;
+      stroke-dasharray: $color-white;
+      transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition-duration: 1s;
+    }
+
+    &__diagram-current-cooperation {
+      stroke: $color-white;
+      transition-property: stroke-dasharray;
+      transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition-duration: 1s;
+    }
+
+    &__diagram-current-quality {
+      stroke: $color-white;
+      transition-property: stroke-dasharray;
+      transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition-duration: 1s;
+    }
+
+    &__value {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 22px;
+      left: 22px;
+      border-radius: 50%;
+      overflow: hidden;
+      font-weight: 700;
+    }
+    &__disc {
+      text-align: center;
+      font-family: $primaryFont;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 16px;
+    }
+  }
+  button {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+.deals-wrap {
+  margin: 0 auto;
+  max-width: 1600px;
+  width: 100%;
+
+  padding-bottom: 29.7%;
+  padding-top: 100px;
+  background-image: url("../img/deals-background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  border-radius: 60px;
+}
