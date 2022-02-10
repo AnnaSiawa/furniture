@@ -8,6 +8,19 @@
   padding-top: 0;
   padding-bottom: 84px;
 
+
+  &__img-circle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__img-line {
+    position: absolute;
+    top: 0;
+    right: 40px;
+  }
+
   .title-wrap {
     padding-bottom: 20px;
     text-align: center;
@@ -26,16 +39,6 @@
     margin: 0 auto;
     padding-bottom: 50px;
 
-    //div {
-    //  &:not(:last-child) {
-    //    margin-right: convert2em(5);
-    //  }
-    //
-    //  &:last-child {
-    //    margin-right: convert2em(2);
-    //  }
-    //}
-
     &__score {
       display: flex;
       align-items: center;
@@ -48,14 +51,20 @@
 
     &__counter {
       position: relative;
+    }
+
+    &__inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 66px;
       height: 66px;
     }
 
     &__diagram-wrapper {
-      //position: absolute;
-      //top: 140px;
-      //left: 0;
+      position: absolute;
+      top: -8px;
+      left: 0;
       z-index: 1;
       width: 100%;
       height: 100%;
@@ -96,13 +105,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      position: absolute;
-      top: 22px;
-      left: 22px;
       border-radius: 50%;
       overflow: hidden;
       font-weight: 700;
     }
+
     &__disc {
       text-align: center;
       font-family: $primaryFont;
@@ -111,6 +118,7 @@
       font-size: 16px;
     }
   }
+
   button {
     position: relative;
     left: 50%;

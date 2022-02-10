@@ -1,0 +1,85 @@
+@import "../modules/vars.scss";
+@import "../modules/font.scss";
+@import "../modules/functions.scss";
+
+.offer {
+  position: relative;
+
+  &__img {
+    margin-bottom: -50px;
+
+    background-image: url("../img/offer-sofa.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding-bottom: 25.94%;
+    padding-right: 59.8%;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 124px 327px;
+
+    width: 100%;
+    background-color: $color-aboutUs;
+    border-radius: 60px;
+    @media all and (min-width: $breakpoint-desktop-S) {
+      flex-direction: row;
+    }
+  }
+
+  &__block-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1035px;
+    width: 100%;
+    @media all and (min-width: $breakpoint-tablet-M) {
+      flex-direction: row;
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 237px;
+    width: 100%;
+    @media all and (min-width: $breakpoint-tablet-M) {
+      width: initial;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @media all and (min-width: $breakpoint-tablet-M) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__disc {
+    width: 123px;
+    @media all and (min-width: $breakpoint-tablet-M) {
+      width: initial;
+    }
+  }
+
+  &__png {
+    margin-right: 10px;
+  }
+}
+
+.offer-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  margin: 0 auto;
+  max-width: 1600px;
+
+}

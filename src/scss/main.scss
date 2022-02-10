@@ -1,6 +1,8 @@
 @import "modules/vars.scss";
 @import "modules/font.scss";
 @import "modules/functions.scss";
+@import "modules/slider.scss";
+
 
 *, *:before, *::before, *:after, *::after {
   box-sizing: border-box;
@@ -136,6 +138,8 @@ body.lock {
 @import "components/aboutUs.scss";
 @import "components/product.scss";
 @import "components/deals.scss";
+@import "components/starProduct.scss";
+@import "components/offer.scss";
 
 @import "components/footer.scss";
 

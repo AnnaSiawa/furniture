@@ -1,0 +1,72 @@
+@import "../modules/vars.scss";
+@import "../modules/font.scss";
+@import "../modules/functions.scss";
+
+.productStar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+
+  max-width: 657px;
+  width: 100%;
+  margin: 0 auto 50px auto;
+
+  @media all and (min-width: $breakpoint-tablet-S) {
+    flex-direction: row;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 130px;
+    margin-bottom: 10px;
+    @media all and (min-width: $breakpoint-tablet-S) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__line {
+    display: none;
+    position: absolute;
+    background-color: $color-gray;
+    max-width: 113px;
+    width: 100%;
+    height: 1px;
+    @media all and (min-width: $breakpoint-tablet-S) {
+      display: block;
+    }
+  }
+
+  .line1 {
+    left: 119px;
+  }
+
+  .line2 {
+    right: 119px;
+  }
+
+  &__circle1 {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid $color-button;
+    background-color: $color-white;
+  }
+
+  &__circle2 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: $color-button;
+  }
+
+  &__text {
+    position: relative;
+  }
+}
