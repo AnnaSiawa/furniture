@@ -22,8 +22,7 @@ const favicon = () => {
     .pipe(dest(path.favicon.dest))
     .pipe(favicons(app.favicons))
     .pipe(dest(path.favicon.dest))
-    .pipe(filter(['favicon.ico', 'apple-touch-icon.png', 'manifest.json']))
-    .pipe(dest(path.root))
+
 }
 
 module.exports = favicon;

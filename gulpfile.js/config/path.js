@@ -33,7 +33,7 @@ module.exports = {
         watch: pathSrc + "/img/**/*.{png,jpg,jpeg,gif,svg}",
         dest: pathDest + "/img"
     },
-    
+
     fonts: {
         src: pathSrc + "/fonts/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}",
         watch: pathSrc + "/fonts/**/*.{eot,ttf,otf,otc,ttc,woff,woff2,svg}",
@@ -43,6 +43,6 @@ module.exports = {
     favicon: {
         src: pathSrc + "/img/favicon/favicon.svg",
         watch: pathSrc + "/img/favicon/favicon.svg",
-        dest: pathDest + "/img/favicon"
+        dest: pathDest
     }
 }
