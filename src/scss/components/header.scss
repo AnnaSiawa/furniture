@@ -8,8 +8,8 @@
   position: relative;
   display: flex;
   z-index: $position-block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+
+  //padding-bottom: 20px;
 
   @include main-style-text;
 
@@ -79,22 +79,6 @@
     @media all and (min-width: $breakpoint-desktop-L) {
       flex: 0 1 62%;
     }
-  }
-
-  &__logo {
-    width: 200px;
-    height: 70px;
-    margin-right: 45px;
-    line-height: 70px;
-    background-color: $color-text;
-    color: $color-white;
-    text-align: center;
-    text-transform: uppercase;
-
-    font-family: $font-Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
   }
 
   &__menu {
@@ -236,6 +220,10 @@
       }
     }
   }
+}
+
+.wrap {
+  padding-top: 20px;
 }
 
 

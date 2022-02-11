@@ -5,8 +5,7 @@
 .aboutUs {
   position: relative;
   z-index: $position-block;
-  padding-top: 84px;
-  padding-bottom: 84px;
+  margin: 84px 0;
 
   &__inner {
     display: flex;
@@ -14,6 +13,9 @@
     align-items: center;
     flex-direction: column;
     padding: 50px 100px;
+
+    background-color: $color-aboutUs;
+    border-radius: 60px;
     @media all and (min-width: $breakpoint-desktop-S) {
       flex-direction: row;
     }
@@ -82,13 +84,4 @@
     padding-bottom: 20px;
     font-size: 22px;
   }
-}
-
-.aboutUs-wrap {
-  margin: 0 auto;
-  max-width: 1600px;
-  width: 100%;
-
-  background-color: $color-aboutUs;
-  border-radius: 60px;
 }

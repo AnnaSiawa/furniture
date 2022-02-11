@@ -34,23 +34,37 @@ html, body {
   font-family: $font-Roboto;
 }
 
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-height: -webkit-fill-available;
+  zoom: 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body.lock {
+  overflow-y: hidden;
+  height: 100vh;
+}
+
 body::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
 
-.content {
-  max-width: 1920px;
+.content-wrap {
+  max-width: 1770px; // - 100px padding = 1670 по макету
   width: 100%;
   margin: 0 auto;
-}
-
-.content-inner {
-  padding: 20px 20px 0;
-  @media all and (min-width: $breakpoint-tablet-L) {
-    padding-left: 120px;
-    padding-right: 120px;
-  }
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .wrapper {
@@ -112,27 +126,6 @@ a {
   }
 }
 
-body {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  min-height: -webkit-fill-available;
-  zoom: 1;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-body.lock {
-  overflow-y: hidden;
-  height: 100vh;
-}
-
-
 @import "components/header.scss";
 @import "components/main-page.scss";
 @import "components/aboutUs.scss";
@@ -140,7 +133,7 @@ body.lock {
 @import "components/deals.scss";
 @import "components/starProduct.scss";
 @import "components/offer.scss";
-
+@import "components/newInBlog.scss";
 @import "components/footer.scss";
 
 //или подключение с помощью маски (sassGlob) всех файлов из директории

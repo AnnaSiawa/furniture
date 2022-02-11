@@ -40,3 +40,19 @@ button {
   transform: translate(-50%, 0);
   background-color: $color-white;
 }
+
+.logo {
+  width: 200px;
+  height: 70px;
+  margin-right: 45px;
+  line-height: 70px;
+  background-color: $color-text;
+  color: $color-white;
+  text-align: center;
+  text-transform: uppercase;
+
+  font-family: $font-Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+}

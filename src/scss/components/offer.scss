@@ -4,6 +4,7 @@
 
 .offer {
   position: relative;
+  margin-bottom: 167px;
 
   &__img {
     margin-bottom: -50px;
@@ -21,7 +22,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 124px 327px;
+    padding: 124px 10px;
 
     width: 100%;
     background-color: $color-aboutUs;

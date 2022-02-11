@@ -5,9 +5,19 @@
 .deals {
   position: relative;
   z-index: $position-block;
-  padding-top: 0;
-  padding-bottom: 84px;
+  margin-bottom: 160px;
+  //padding-top: 0;
+  //padding-bottom: 84px;
 
+  &__inner {
+    padding-bottom: 29.7%;
+    padding-top: 100px;
+    background-image: url("../img/deals-background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center top;
+    border-radius: 60px;
+  }
 
   &__img-circle {
     position: absolute;
@@ -127,15 +137,15 @@
 }
 
 .deals-wrap {
-  margin: 0 auto;
-  max-width: 1600px;
-  width: 100%;
+  //margin: 0 auto;
+  //max-width: 1600px;
+  //width: 100%;
 
-  padding-bottom: 29.7%;
-  padding-top: 100px;
-  background-image: url("../img/deals-background.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center top;
-  border-radius: 60px;
+  //padding-bottom: 29.7%;
+  //padding-top: 100px;
+  //background-image: url("../img/deals-background.png");
+  //background-repeat: no-repeat;
+  //background-size: contain;
+  //background-position: center top;
+  //border-radius: 60px;
 }

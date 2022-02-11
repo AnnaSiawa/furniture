@@ -1,5 +1,60 @@
-.footer {
-    font-size: 30px;
-    line-height: 1.5;
+@import "../modules/vars.scss";
+@import "../modules/font.scss";
+@import "../modules/functions.scss";
 
+.footer {
+  &__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-button;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 76px 0;
+  }
+
+  &__contacts {
+    max-width: 600px;
+    width: 100%;
+  }
+
+  &__disc {
+    margin: 30px 0;
+  }
+
+  &__networks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+
+    &_item {
+      width: 32px;
+      height: 32px;
+      line-height: 32px;
+      background-color: $color-text;
+      text-align: center;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all .5s;
+    }
+  }
+
+  &__links {
+    max-width: 450px;
+    width: 100%;
+  }
+
+  &__copyright {
+    &_inner {
+      padding: 15px 0;
+      background-color: $color-text;
+      color: $color-button;
+      text-align: center;
+    }
+  }
 }
