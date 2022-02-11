@@ -6,19 +6,23 @@
   position: relative;
   z-index: $position-block;
   font-family: $primaryFont;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    padding-bottom: 30px;
+  }
   h1 {
     font-style: normal;
     font-weight: 600;
-    font-size: 36px;
+    font-size: $font-size-title1-mobile;
     line-height: 125%;
     opacity: 0.8;
     @media all and (min-width: $breakpoint-tablet-L) {
-      font-size: 76px;
+      font-size: $font-size-title1-tablet;
       line-height: 93px;
     }
     @media all and (min-width: $breakpoint-desktop-S) {
       width: 660px;
       margin-bottom: 34px;
+      font-size: $font-size-title1-desktop;
     }
   }
   a {
@@ -29,7 +33,7 @@
     font-family: $font-Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 22px;
+    font-size: $font-size-p;
     line-height: 26px;
     margin-bottom: 20px;
     @media all and (min-width: $breakpoint-desktop-S) {
@@ -37,21 +41,33 @@
       margin-bottom: 54px;
     }
   }
-  button {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 27px;
-    text-align: center;
-  }
+
   .main-image {
-    width: 300px;
-    @media all and (min-width: $breakpoint-desktop-L) {
-      width: 1240px;
+    background-image: url("../img/sofa-main.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-right: 61.59%;
+    padding-bottom: 68.15%;
+
+    @media all and (min-width: $breakpoint-desktop-S) {
+      padding-right: 61.59%;
+      padding-bottom: 43.15%;
       position: absolute;
       right: 0;
+      top: -94px;
+    }
+    @media all and (min-width: $breakpoint-desktop-L) {
       top: -160px;
     }
+    @media all and (min-width: 2000px) {
+      width: 1247px;
+      height: 880px;
+      padding-bottom: 0;
+      padding-right: 0;
+    }
+
+
     img {
       width: 100%;
     }

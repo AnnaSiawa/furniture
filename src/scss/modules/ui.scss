@@ -42,9 +42,10 @@ button {
 }
 
 .logo {
-  width: 200px;
-  height: 70px;
-  margin-right: 45px;
+  width: 135px;
+  height: 65px;
+  margin: 0 auto;
+
   line-height: 70px;
   background-color: $color-text;
   color: $color-white;
@@ -55,4 +56,25 @@ button {
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
+
+  @media all and (min-width: $breakpoint-tablet-S) {
+    width: 200px;
+    height: 70px;
+    margin: 0;
+  }
 }
+
+p {
+  font-family: $font-Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $font-size-p;
+  line-height: 26px;
+  margin-bottom: 20px;
+  color: $color-p;
+  @media all and (min-width: $breakpoint-desktop-S) {
+    width: 489px;
+    margin-bottom: 54px;
+  }
+}
+

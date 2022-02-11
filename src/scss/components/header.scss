@@ -8,9 +8,6 @@
   position: relative;
   display: flex;
   z-index: $position-block;
-
-  //padding-bottom: 20px;
-
   @include main-style-text;
 
   &__top {
@@ -62,7 +59,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 21px;
     @media all and (min-width: $breakpoint-desktop-S) {
+      margin-bottom: 183px;
+    }
+    @media all and (min-width: $breakpoint-desktop-L) {
       margin-bottom: 217px;
     }
   }
@@ -92,7 +93,7 @@
     padding-left: 20px;
     background-color: $color-gray;
     @media all and (min-width: $breakpoint-tablet-S) {
-      top: 150px;
+      top: 170px;
       height: calc(100vh - 150px);
     }
     @media all and (min-width: $breakpoint-tablet-L) {
@@ -116,12 +117,6 @@
       @media all and (min-width: $breakpoint-tablet-L) {
        padding-bottom: 0;
       }
-      //&:not(:last-child) {
-      //  margin-right: 50px;
-      //  //@media screen and (min-width: $width-tablet-S) {
-      //  //  padding-bottom: 45px;
-      //  //}
-      //}
     }
   }
   &__menu._active {
@@ -148,8 +143,11 @@
         height: 100%;
       }
 
-      &:first-child {
-        margin-right: 45px;
+      &:nth-child(2) {
+        margin-right: 5px;
+        @media all and (min-width: $breakpoint-tablet-L) {
+          margin-right: 45px;
+        }
       }
     }
   }

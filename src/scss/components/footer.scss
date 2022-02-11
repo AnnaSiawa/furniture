@@ -3,6 +3,8 @@
 @import "../modules/functions.scss";
 
 .footer {
+  font-size: 24px;
+
   &__main {
     display: flex;
     justify-content: center;
@@ -13,13 +15,21 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: column;
     padding: 76px 0;
+    @media all and (min-width: $breakpoint-tablet-S) {
+      flex-direction: row;
+    }
   }
 
   &__contacts {
     max-width: 600px;
     width: 100%;
+    margin-bottom: 20px;
+    @media all and (min-width: $breakpoint-tablet-S) {
+      margin-bottom: 0;
+    }
   }
 
   &__disc {
@@ -42,11 +52,32 @@
       cursor: pointer;
       transition: all .5s;
     }
+
+    &_desktop {
+      display: none;
+      @media all and (min-width: $breakpoint-tablet-S) {
+        display: flex;
+      }
+    }
+
+    &_mobile {
+      display: flex;
+      @media all and (min-width: $breakpoint-tablet-S) {
+        display: none;
+      }
+    }
   }
 
   &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     max-width: 450px;
     width: 100%;
+    margin-bottom: 40px;
+    @media all and (min-width: $breakpoint-tablet-S) {
+      margin-bottom: 0;
+    }
   }
 
   &__copyright {
@@ -57,4 +88,30 @@
       text-align: center;
     }
   }
+
+  &__title {
+    display: inline;
+    font-size: 30px;
+    font-weight: 600;
+    border-bottom: solid 2px $color-text-menu;
+  }
+
+  ul {
+    text-transform: uppercase;
+  }
+   li {
+     position: relative;
+     padding-left: 21px;
+     margin-top: 20px;
+     &::before {
+       content: "";
+       position: absolute;
+       left: 0;
+       top: 14px;
+       height: 8px;
+       width: 8px;
+       background-color: $color-text;
+       border-radius: 50%;
+     }
+   }
 }

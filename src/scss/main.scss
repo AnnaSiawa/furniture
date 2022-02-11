@@ -10,21 +10,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: inherit;
-  font-weight: 500;
-  padding: 0;
-  margin: 0;
-}
-
-h3 {
-  display: inline;
-  border-bottom: solid 2px $color-button;
-  font-family: $primaryFont;
-  font-weight: 600;
-  font-size: 30px;
-}
-
 html, body {
   //overflow-x: hidden;
   box-sizing: border-box;
@@ -32,6 +17,10 @@ html, body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   font-family: $font-Roboto;
+}
+
+html {
+  height: 100%;
 }
 
 body {
@@ -63,8 +52,12 @@ body::-webkit-scrollbar {
   max-width: 1770px; // - 100px padding = 1670 по макету
   width: 100%;
   margin: 0 auto;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  @media all and (min-width: $breakpoint-tablet-S) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .wrapper {
@@ -96,19 +89,16 @@ body::-webkit-scrollbar {
 
   .livingRoom {
     display: none;
-    @media all and (min-width: $breakpoint-tablet-S) {
 
-    }
     @media all and (min-width: $breakpoint-desktop-S) {
       display: block;
       width: 1191px;
+      height: 864px;
+    }
+    @media all and (min-width: $breakpoint-desktop-L) {
       height: 1080px;
     }
   }
-}
-
-html {
-  height: 100%;
 }
 
 p {
@@ -124,6 +114,27 @@ a {
     color: $color-text;
     text-decoration: none;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  display: inline;
+  border-bottom: solid 2px $color-button;
+  font-family: $primaryFont;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 @import "components/header.scss";
