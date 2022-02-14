@@ -5,18 +5,28 @@
 .deals {
   position: relative;
   z-index: $position-block;
-  margin-bottom: 160px;
-  //padding-top: 0;
-  //padding-bottom: 84px;
+  margin-bottom: 35px;
+  @media all and (min-width: $breakpoint-tablet-L) {
+    margin-bottom: 160px;
+  }
+
 
   &__inner {
-    padding-bottom: 29.7%;
-    padding-top: 100px;
-    background-image: url("../img/deals-background.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center top;
-    border-radius: 60px;
+    padding-bottom: 20px;
+    background:   linear-gradient(90deg, #51675d, #9ab8b5, #51675d);
+    border-radius: 10px;
+
+    @media all and (min-width: $breakpoint-tablet-S) {
+      padding-bottom: 29.7%;
+      background-image: url("../img/deals-background.png");
+      background-color: initial;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center top;
+    }
+    @media all and (min-width: $breakpoint-tablet-L) {
+      padding-top: 100px;
+    }
   }
 
   &__img-circle {
@@ -28,7 +38,10 @@
   &__img-line {
     position: absolute;
     top: 0;
-    right: 40px;
+    right: 0;
+    @media all and (min-width: $breakpoint-tablet-S) {
+      right: 40px;
+    }
   }
 
   .title-wrap {
