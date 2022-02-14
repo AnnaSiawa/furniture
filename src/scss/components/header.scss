@@ -7,7 +7,7 @@
 .header {
   position: relative;
   display: flex;
-  z-index: $position-block;
+  z-index: $position-header-block;
   @include main-style-text;
 
   &__top {
@@ -73,6 +73,8 @@
     align-items: center;
     justify-content: space-between;
     flex: 0 1 25%;
+    position: relative;
+    z-index: 3;
     font-family: $font-Roboto;
     @media all and (min-width: $breakpoint-tablet-L) {
       flex: 0 1 85%;
@@ -87,14 +89,14 @@
 
     position: fixed;
     width: 100vw;
-    height: calc(100vh - 124px);
-    top: 124px;
+    height: calc(100vh - 160px);
+    top: 160px;
     right: -220%;
     padding-left: 20px;
     background-color: $color-gray;
     @media all and (min-width: $breakpoint-tablet-S) {
-      top: 170px;
-      height: calc(100vh - 150px);
+      top: 191px;
+      height: calc(100vh - 191px);
     }
     @media all and (min-width: $breakpoint-tablet-L) {
       position: relative;
@@ -111,15 +113,31 @@
 
     &_item {
       text-transform: capitalize;
-      color: $color-text-menu;
       cursor: pointer;
+      padding-top: 20px;
       padding-bottom: 10px;
       @media all and (min-width: $breakpoint-tablet-L) {
-       padding-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      a {
+        color: $color-white;
+        background-image: linear-gradient($color-button, $color-button);
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size .3s, color .3s;
+        @media all and (min-width: $breakpoint-tablet-L) {
+          color: $color-text-menu;
+        }
+        &:hover {
+          background-size: 100% 2px;
+        }
       }
     }
   }
-  &__menu._active {
+
+  &__menu.active {
     width: 100vw;
     right: 0;
     z-index: 1001;
@@ -147,6 +165,14 @@
         margin-right: 5px;
         @media all and (min-width: $breakpoint-tablet-L) {
           margin-right: 45px;
+        }
+      }
+
+      &:nth-child(2) {
+        margin-right: 15px;
+        @media all and (min-width: $breakpoint-tablet-L) {
+          margin-right: 0;
+          margin-left: 45px;
         }
       }
     }
@@ -200,7 +226,7 @@
       }
     }
 
-    &__icon._active {
+    &__icon.active {
       span {
         &:nth-child(1) {
           top: 6.9px;

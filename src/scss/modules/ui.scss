@@ -14,6 +14,8 @@ button {
   font-size: 22px;
   line-height: 27px;
   text-align: center;
+
+  transition: background-color 0.25s linear;
   @media all and (min-width: $breakpoint-tablet-S) {
     width: 220px;
     height: 60px;
@@ -39,6 +41,16 @@ button {
   left: 50%;
   transform: translate(-50%, 0);
   background-color: $color-white;
+}
+
+.button_currency:hover {
+  background-color: #757779;
+}
+.button_account:hover {
+background-color: #957332;
+}
+.button_product:hover {
+  background-color: #b9b9b9;
 }
 
 .logo {
@@ -73,7 +85,7 @@ p {
   margin-bottom: 20px;
   color: $color-p;
   @media all and (min-width: $breakpoint-desktop-S) {
-    width: 489px;
+    //width: 489px;
     margin-bottom: 54px;
   }
 }
